@@ -5,7 +5,7 @@
     <ul>
         @foreach($groups as $group)
             <li>
-                <a href="#">{{ $group['name'] }}</a> ({{ $group['product_count'] }})
+                <a href="#">{{ $group['name'] }}</a> ({{ $group['productCount'] }})
             </li>
         @endforeach
     </ul>
