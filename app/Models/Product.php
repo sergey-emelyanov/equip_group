@@ -16,4 +16,8 @@ class Product extends Model
         return $this->belongsTo(Group::class, 'id_group');
     }
     
+    public function price()
+    {
+        return $this->hasOne(Price::class,'id_product');
+    }
 }

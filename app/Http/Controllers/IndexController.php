@@ -7,9 +7,9 @@ use App\Models\Group;
 use App\Models\Price;
 use App\Models\Product;
 
-class MainController extends Controller
+class indexController extends Controller
 {
-    public function index()
+    public function __invoke()
     {
         // Получаем группы первого уровня с их подгруппами
         $groups = Group::where('id_parent', 0)->with('children')->get();
@@ -26,4 +26,5 @@ class MainController extends Controller
         // Передаём данные во view
         return view('groups.index', ['groups' => $groupsData]);
     }
+
 }

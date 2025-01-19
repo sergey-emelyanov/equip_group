@@ -6,4 +6,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', 'App\Http\Controllers\MainController@index');
+Route::get('/main', 'App\Http\Controllers\IndexController');
+
+Route::get('/products', 'App\Http\Controllers\ProductController');
+
+Route::get('/products/{product}','App\Http\Controllers\ShowController')->name('product.show');
