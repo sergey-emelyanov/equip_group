@@ -27,6 +27,7 @@ class Group extends Model
         return $this->hasMany(Product::class, 'group_id');
     }
 
+    // Получить все подгруппы
     public function getAllSubgroupIds()
     {
         $subgroupIds = collect([$this->id]); // Сохраняем ID текущей группы
