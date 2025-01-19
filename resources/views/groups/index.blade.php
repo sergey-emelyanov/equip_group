@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Главная страница:</h1>
+    <h1>Группы товаров:</h1>
     <ul>
         @foreach($groups as $group)
             <li>
